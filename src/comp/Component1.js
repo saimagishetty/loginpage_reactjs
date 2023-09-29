@@ -11,16 +11,22 @@ class Component1 extends React.Component {
             loggedIn: false,
         };
     }
+    // handleChange
     handleChange = (event) => {
         const { name, value } = event.target;
         this.setState({ [name]: value });
     }
-
+// handleSubmit
     handleSubmit = (event) => {
         event.preventDefault();
         this.setState({ loggedIn: true },
             console.log(this.state)
         );
+        // handleSubmit = (event) => {
+        //     event.preventDefault();
+        //     this.setState({ loggedIn: true },
+        //         console.log(this.state)
+        //     );
     }
     render() {
         return (
